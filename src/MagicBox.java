@@ -1,9 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class MagicBox<T> {
-    int quantity;//храним максимальное число элементов коробки
     T[] arrayItem;//сама коробка
     public MagicBox(int quantity) {
         arrayItem = (T[]) new Object[quantity];
