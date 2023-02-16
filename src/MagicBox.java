@@ -30,7 +30,6 @@ public class MagicBox<T> {
             throw new RuntimeException("Волшебная коробка не заполнена. Осталось мест: " + count);
         }
         Random random = new Random();
-        int randomInt = random.nextInt(quantity + 1);
-        return arrayItem[randomInt];
+        return arrayItem[random.nextInt(quantity + 1)];
     }
 }
