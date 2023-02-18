@@ -1,10 +1,8 @@
 import java.util.Random;
 
 public class MagicBox<T> {
-    int quantity;
     T[] arrayItem;//сама коробка
     public MagicBox(int quantity) {
-        this.quantity = quantity;
         arrayItem = (T[]) new Object[quantity];
     }
 
@@ -29,6 +27,6 @@ public class MagicBox<T> {
             throw new RuntimeException("Волшебная коробка не заполнена. Осталось мест: " + count);
         }
         Random random = new Random();
-        return arrayItem[random.nextInt(quantity)];
+        return arrayItem[random.nextInt(arrayItem.length)];
     }
 }
